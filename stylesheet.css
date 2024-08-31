@@ -1,61 +1,96 @@
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+/* ベーシックスタイルリセット */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
     background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    font-size: 16px;
 }
 
 header {
-    background: #333;
+    background-color: #35424a;
     color: #fff;
-    padding: 10px 0;
+    padding: 20px 0;
     text-align: center;
 }
 
 header h1 {
-    margin: 0;
+    margin-bottom: 10px;
+    font-size: 24px;
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
+.global-nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
 }
 
-nav ul li {
-    display: inline;
-    margin: 0 10px;
+.global-nav li {
+    margin: 0 15px;
 }
 
-nav ul li a {
+.global-nav a {
     color: #fff;
     text-decoration: none;
+    padding: 8px 20px;
+    background-color: #e8491d;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.global-nav a:hover {
+    background-color: #e87a50;
+}
+
+aside {
+    background-color: #f4f4f4;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+.local-nav ul {
+    list-style-type: none;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.local-nav li {
+    margin-bottom: 10px;
+}
+
+.local-nav a {
+    text-decoration: none;
+    color: #333;
+    padding: 8px 10px;
+    display: block;
+    background-color: #eaeaea;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.local-nav a:hover {
+    background-color: #d4d4d4;
+}
+
+main {
+    padding: 20px;
 }
 
 section {
-    margin: 20px;
-    padding: 20px;
-    background: #fff;
-    border-radius: 5px;
-}
-
-section img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin-top: 10px;
+    margin-bottom: 30px;
 }
 
 footer {
-    text-align: center;
-    padding: 20px;
-    background: #333;
+    background-color: #35424a;
     color: #fff;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-}
-
-footer p {
-    margin: 0;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 30px;
 }
