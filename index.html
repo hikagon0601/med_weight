@@ -12,8 +12,8 @@
 <body>
     <header>
         <h1>医学部ウエイトトレーニング部</h1>
-        <div class="menu-icon">メニュー</div>
-        <nav class="global-nav">
+        <div class="menu-icon" id="menu-icon">☰ メニュー</div> <!-- メニューアイコン -->
+        <nav class="global-nav" id="global-nav">
             <ul>
                 <li><a href="activity_diary.html">活動日記</a></li>
                 <li><a href="achievements.html">活動実績</a></li>
@@ -23,8 +23,8 @@
     </header>
 
     <aside>
-        <nav>
-            <ul class="local-nav">
+        <nav class="local-nav">
+            <ul>
                 <li><a href="#about">部活紹介</a></li>
                 <li><a href="#schedule">活動時間</a></li>
                 <li><a href="#location">場所</a></li>
@@ -53,10 +53,10 @@
         </section>
 
         <section id="contact">
-            <h2>連絡先</h2>
-            <p>公式インスタグラムをフォローしてくださ</p>
+            <h2>インスタグラム</h2>
+            <p>公式インスタグラムをフォローしてください。</p>
             <a href="https://www.instagram.com/kyudai_med_weight?igsh=bXFidzlhMnBmMmxl&utm_source=qr" target="_blank">
-                リンクはこちらどうぞ。
+                <img src="images/instagram_icon.jpeg" alt="インスタグラムアイコン">
             </a>
         </section>
     </main>
@@ -64,6 +64,19 @@
     <footer>
         <p>&copy; 2024 医学部ウエイトトレーニング部</p>
     </footer>
+
+    <!-- JavaScriptをフッターの直前に配置 -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuIcon = document.getElementById('menu-icon');
+            const globalNav = document.getElementById('global-nav');
+
+            menuIcon.addEventListener('click', function () {
+                globalNav.classList.toggle('active');
+                menuIcon.classList.toggle('active');
+            });
+        });
+    </script>
 </body>
 
 </html>
