@@ -1,0 +1,44 @@
+/* スマホ用のレスポンシブデザイン */
+@media screen and (max-width: 768px) {
+
+    /* グローバルナビゲーションのスタイル変更 */
+    .global-nav ul {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+
+    .global-nav li {
+        margin: 10px 0;
+    }
+
+    .global-nav a {
+        padding: 10px;
+        font-size: 18px;
+        width: 100%;
+        text-align: center;
+    }
+
+    /* メニューアイコンの追加 */
+    .global-nav {
+        display: none;
+        flex-direction: column;
+    }
+
+    .menu-icon {
+        display: block;
+        background-color: #e8491d;
+        padding: 10px;
+        color: #fff;
+        text-align: center;
+        font-size: 18px;
+        cursor: pointer;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    /* メニューアイコンをクリックした時のナビゲーション表示 */
+    .menu-icon.active+.global-nav {
+        display: flex;
+    }
+}
