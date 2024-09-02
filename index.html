@@ -28,7 +28,7 @@
                 <li><a href="#about">部活紹介</a></li>
                 <li><a href="#schedule">活動時間</a></li>
                 <li><a href="#location">場所</a></li>
-                <li><a href="#contact">インスタグラム</a></li>
+                <li><a href="#contact">連絡先</a></li>
             </ul>
         </nav>
     </aside>
@@ -53,19 +53,20 @@
         </section>
 
         <section id="contact">
-            <h2>インスタグラム</h2>
-            <p>公式インスタグラムをフォローしてください。</p>
+            <h2>連絡先</h2>
+            <p>公式インスタグラムにＤＭにてお気軽にご連絡ください。</p>
             <a href="https://www.instagram.com/kyudai_med_weight?igsh=bXFidzlhMnBmMmxl&utm_source=qr" target="_blank">
-                <img src="images/instagram_icon.jpeg" alt="インスタグラムアイコン">
+                リンクはこちらから
             </a>
         </section>
     </main>
 
     <footer>
         <p>&copy; 2024 医学部ウエイトトレーニング部</p>
+        <p>このサイトのアクセス数: <span id="visitor-count">0</span>(^^♪</p>
     </footer>
 
-    <!-- JavaScriptをフッターの直前に配置 -->
+    <!-- JavaScriptをフッターの直前に配置 -->(^^♪)
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const menuIcon = document.getElementById('menu-icon');
@@ -75,6 +76,17 @@
                 globalNav.classList.toggle('active');
                 menuIcon.classList.toggle('active');
             });
+            // 訪問者数を取得および表示する部分
+            let visitorCount = localStorage.getItem('visitorCount');
+
+            if (visitorCount === null) {
+                visitorCount = 0;
+            }
+
+            visitorCount++;
+
+            localStorage.setItem('visitorCount', visitorCount);
+            document.getElementById('visitor-count').textContent = visitorCount;
         });
     </script>
 </body>
