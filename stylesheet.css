@@ -98,8 +98,11 @@ footer {
     margin-top: 30px;
 }
 
-img {
-    width: 300px;
-    height: auto;
-    object-fit: cover;
+/* 画像を中央揃えにするためのCSS */
+section img {
+    display: block;
+    margin: 0 auto; /* 左右のマージンを自動に設定して中央揃え */
+    width: 300px; /* 画像の幅を300pxに設定 */
+    height: auto; /* 縦横比を維持するために高さを自動調整 */
+    object-fit: cover; /* 必要に応じて画像を中央にフィットさせる */
 }
